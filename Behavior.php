@@ -56,7 +56,7 @@ class Behavior extends \yii\behaviors\AttributeBehavior
     public function init()
     {
         if ($this->attribute !== null) {
-            $this->attributes[BaseActiveRecord::EVENT_BEFORE_INSERT][] = $this->attribute;
+            $this->attributes[BaseActiveRecord::EVENT_INIT][] = $this->attribute;
         }
         parent::init();
     }
